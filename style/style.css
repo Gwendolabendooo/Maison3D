@@ -1,0 +1,311 @@
+/* Mise en page du corp du site */
+body{
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 180px;
+}
+/* Mise en forme du bandeau menu + slogan et logo */
+nav{
+    top: 0;
+    width: 100%;
+    left: 0;
+    position: fixed;
+    margin: 0;
+    background-image: url("../includes/banner.jpg");
+    background-repeat: no-repeat;
+    background-size: 152px cover; 
+    z-index: 5;
+}
+ul{
+    padding-inline-start: unset;
+    margin: 0;
+}
+a{
+    text-decoration: none;
+    display: inline-block;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.2em;
+    padding: 10px 3.4%;
+}
+#logo{
+    max-width: 1000px;
+    max-height: 100px;
+    display: inline;
+}
+#Menu li{
+    list-style-type: none; 
+}
+#Menu{
+    text-align: center;
+    box-shadow: 0px 3px 3px 0px #00000073;
+    font-size: 0.8em;
+    background-color: #fc4c02;
+    color: white;
+}
+#Menu .containerRubrique{
+    display: inline;
+    position: relative;
+}
+.rubrique::after {
+    content: '';
+    display: block;
+    margin: auto;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: width .4s;
+}
+.containerRubrique:hover .rubrique::after {
+    width: 100%;
+}
+.sousmenu::after {
+    content: '';
+    display: block;
+    margin: auto;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: width .4s;
+}
+.sousmenu{
+    display: inline-block;
+    padding: 10px 14%;
+}
+.listeSousmenu:hover .containerSousmenu:hover .sousmenu::after {
+    width: 100%;
+}
+.containerRubrique{
+    cursor: pointer;
+}
+.listeSousmenu{
+    position: absolute;
+    left: 0;
+    height: 0%;
+    transition: height .4s;
+    top: 28px;
+    overflow: hidden;
+    width: 100%;
+    box-shadow: 0px 3px 3px 0px #00000073;
+}
+.gmenu:hover .listeSousmenu{
+    height: 549%;
+}
+.gmenu{
+    position: relative;
+}
+.containerSousmenu{
+    background: #ff6f1c;
+    color: white;
+}
+#Bandeau{
+    display: flex;
+    max-height: 100px;
+    width: fit-content;
+    width: -moz-fit-content;
+    margin: auto;
+}
+.slogant{
+    align-self: center;
+    display: inline;
+    font-size: 2em;
+}
+.animSlogant{
+    overflow: hidden;
+    animation: hidd 3s;
+    align-self: center;
+    white-space:nowrap;
+    font-family: 'Questrial', sans-serif;
+    color: #fc4c02;
+    margin-left: 2em;
+}
+@keyframes hidd {
+    0% {
+        width: 0%;
+    }
+    15%{
+        width: 0%;
+    }
+    100% {
+        width: 74%;
+    }
+}
+#main{
+    margin: 1%;
+    display: flex;
+}
+.burgermenu{
+    display: none;
+}
+/* Délimitation du contenu */
+.content{
+    width: 70%;
+}
+.title{
+    color: #fc4c02;
+    text-align: center;
+    font-family: 'Questrial', sans-serif;
+    margin-bottom: 5%;
+}
+/* Animation des différents block */
+.animscale, .animscale2{
+    transition: all .3s;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    -o-transition: all .3s;
+}
+.animscale:hover{
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+}
+.animscale2:hover{
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}
+/* Mise en forme et de la délimitation de l'actualité */
+.actu{
+  width: 30%;
+  background-color: #f2f2f2;
+  box-shadow: 2px 2px rgba(0, 0, 0, 0.2);
+  border-radius: .5em;
+  padding: 3%;
+  height: 100%;
+}
+.actu_title{
+  font-size: 1.4em;
+  font-weight: bold;
+  font-family: 'Questrial', sans-serif;
+  color: #fc4c02;
+  text-align: center;
+  margin-bottom: 5%;
+}
+.actu_content{
+  text-align: justify;
+  font-family: 'Raleway', sans-serif;
+  margin-bottom: 5%;
+  text-indent: 2em;
+}
+.actu_separator{
+  height: .2em;
+  background-color: #ff6f1c;
+  border-radius:1em;
+  margin-bottom: 5%;
+}
+/* Mise en forme du footer */
+footer{
+    margin: 2%;
+    margin-top: 5%;
+    padding: 1%;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    border-top: 2px solid #fc4c02;
+}
+.fab{
+    font-size: 2em;
+    margin: 2%;
+}
+.fab:hover{
+    opacity: .7;
+    cursor: pointer;
+}
+.fa-facebook{color: #3B5998;}
+.fa-twitter{color: #55ACEE;}
+.fa-linkedin{color: #007bb5;}
+.fa-instagram{
+    color: white;
+    background: linear-gradient(to bottom right, #cc33ff 0%, #ff0000 100%);
+    padding: .5px 1.2px .5px 1.2px;
+    border-radius: .1em;
+}
+/* Responsive design */
+@media screen and (max-width: 1178px){
+    .listeSousmenu{
+        left: -14%;
+        width: auto;
+        right: -14%;
+    }
+}
+@media screen and (max-width: 883px){
+    #Menu .rubrique{
+        padding: 10px 1.4%;
+    }
+    .listeSousmenu{
+        left: -32%;
+        right: -32%;
+    }
+}
+@media screen and (max-width: 700px){
+    body{
+        width: 100%;
+    }
+    header{
+        display: block;
+    }
+    .burgermenu{
+        display: block;
+        padding: 1em;
+        transition: transform .5s;
+    }
+    .fa-bars::before{
+        font-size: 2em;
+    }
+    .animSlogant{
+        width: fit-content;
+    }
+    .slogant{
+        font-size: 16px;
+    }
+    #Menu{
+        height: 51.4px;
+        transition: height .5s;
+        overflow: hidden;
+    }
+    #Menu .containerRubrique{
+        display: block;
+    }
+    #Menu:hover{
+        height: 256.4px;
+    }
+    #Menu:hover .burgermenu {
+        transform: rotate(90deg);
+    }
+    .listeSousmenu{
+        z-index: 10;
+    }
+    .gmenu:hover .listeSousmenu{
+        height: 200%;
+    }
+    .animSlogant{
+        margin: 0;
+    }
+    #main{
+        display: block;
+    }
+    .content{
+        width: 100%;
+    }
+    .actu{
+        width: 95%;
+        padding: 1%;
+        margin: 5% auto;
+    }
+    @keyframes hidd {
+        0% {
+            width: 0px;
+        }
+        15%{
+            width: 0px;
+        }
+        100% {
+            width: 188.4px;
+        }
+    }
+}

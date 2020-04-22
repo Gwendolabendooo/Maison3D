@@ -1,0 +1,96 @@
+/* Alignement d'un block à droite */
+.right
+{
+    margin-left: 5%;
+}
+
+/* Mise en forme des block produits */
+.produit
+{
+    background-color: #f2f2f2;
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.2);
+    border-radius: .5em;
+    width: 350PX;
+    padding: .1%;
+    display: inline-block;
+    
+}
+
+.produit_title
+{
+  margin-top: 5%;
+  text-align: center;
+  font-size: 1.7em;
+  font-weight: bold;
+  font-family: 'Questrial', sans-serif;
+  color: #fc4c02;
+}
+
+.produit_img
+{
+    width: 300px;
+    height: 200px;
+    margin: 5% auto;
+}
+
+.produit_img img
+{
+    border-radius: .2em;
+}
+
+.produit_desc
+{
+    margin: 5%;
+    text-align: justify;
+    font-family: 'Raleway', sans-serif;
+}
+
+.produit_buy
+{
+    margin: 5%;
+    text-align: center;
+}
+
+button
+{
+    border: 2px solid #ff6f1c;
+    border-radius: .4em;
+    background-color: white;
+    color: black;
+    padding: .6em .7em;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+button:hover
+{
+    color: white;
+    background-color: #ff6f1c;
+    transition: .2s;
+    -moz-transition: .2s;
+    -ms-transition: .2s;
+    -o-transition: .2s;
+    -webkit-transition: .2s;
+}
+
+.produit_buy b
+{
+  font-size: 1.4em;
+  font-family: 'Raleway', sans-serif;
+  color: #fc4c02;
+  font-weight: bold;
+  padding-left: 10%;
+}
+
+
+/* Responsive design pour les block produits */
+@media screen and (max-width: 1280px){
+    .produit{
+        display: block;
+        margin: auto;
+    }
+    .right{
+        margin: 0;
+        margin: 5% auto;
+    }
+}

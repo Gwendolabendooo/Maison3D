@@ -1,0 +1,53 @@
+table {
+    border-collapse: collapse;
+    width: 80%;
+    margin: auto;
+}
+th{
+    font-family: 'Questrial', sans-serif;
+    text-align: left;
+}
+td{
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+}
+th, td {
+    padding: 8px;
+    border-bottom: 2px solid #fc4c02;
+}
+tr:hover {
+    background-color:#feede6;
+}
+.title{
+    background-color: #fc4c02;
+    color: white;
+    text-align:center;
+}
+.fa-check{
+        color: green;
+        font-size: 1.5em;
+    }
+
+.fa-times{
+        color: red;
+        font-size: 1.5em;
+    }
+    .presentation{
+    width: 80%;
+    margin: auto;
+    text-align: justify;
+}
+p{
+    text-indent: 2em;
+    font-family: 'Raleway', sans-serif;
+}
+h1{
+    color: #fc4c02;
+    text-align: center;
+    font-family: 'Questrial', sans-serif;
+    margin-bottom: 5%;
+}
+.divvideo{
+    margin: auto;
+    text-align: center;
+}
